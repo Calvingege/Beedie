@@ -91,7 +91,7 @@
               <div>
                 <ul>
                 <a href="/home"><li>Home</li></a>
-                <a href="/login">Login</a>
+                <a href="/login"><li>Login</li></a>
                 <a href="/create/bid"><li>Buy Item</li></a>
                 <a href="/create/adds"><li>Sell Item</li></a>
                 <a href="/about"><li>about us</li></a>
@@ -105,7 +105,7 @@
         </div>
             
                 <div id="picture-selection">
-                    <img src="../assets/Beedie.png" alt="" style="width: 400px; height: 300px" class="floatRight">
+                    <img src="/assets/shopping.png" alt="" style="width: 400px; height: 300px" class="floatRight">
                 </div>  
             
                 <div id="hero-section">
