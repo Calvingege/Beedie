@@ -25,6 +25,11 @@ Route::get('/dashboard', function () {
 })->middleware(['auth'])->name('dashboard');
 
 Route::get(
+    '/home', function() {
+    return view('Home');
+    })->name('Home');
+
+Route::get(
     '/create/bid',
     [BidController::class, 'CreateBid']
 )->name('CreateBid');
@@ -53,5 +58,10 @@ Route::post(
     '/store/adds',
     [AddsController::class, 'StoreAdds']
 )->name('StoreAdds');
+
+Route::get(
+    '/about', function() {
+        return view('About');
+    })->name('About');
 
 require __DIR__.'/auth.php';

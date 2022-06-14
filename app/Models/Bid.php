@@ -9,6 +9,7 @@ class Bid extends Model
 {
     use HasFactory;
     protected $fillable = [
+        'NamaBarang',
         'HargaLelang'
     ];
 }

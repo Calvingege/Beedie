@@ -27,7 +27,7 @@ class AddsController extends Controller
             'FotoBarang' => $fileName
         ]);
 
-        return redirect('/');
+        return redirect('/create/bid');
     }
 
     public function ShowAdds() {

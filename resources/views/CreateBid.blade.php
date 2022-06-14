@@ -19,6 +19,67 @@
 
 </head>
 <body>
+<style>
+  #navbar{
+    background-color: greenyellow;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+ul{
+    color: white;
+    display: flex;
+    height: 10vh;
+    /* align-items: center; */
+}
+
+li{
+    list-style: none;
+    margin: 0 30px;
+    font-size: 25px;
+}
+
+a{
+    font-weight: bold;
+    color: green;
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+}
+
+#hero-section{
+    height: 70vh;
+    background-color: white;
+    background-size: cover;
+    /* background-repeat: ; */
+    display: flex;  
+    justify-content: center;
+    flex-direction: column;
+    padding-left: 200px;
+}
+
+#picture-selection{
+    float: right;
+    padding: 10px;
+    padding-top: 120px;
+    padding-right: 250px;
+}
+
+#pre-selection{
+    padding-left: 88px;
+}
+</style>
+<div id="navbar">
+        <ul>
+        <a href="/home"><li>Home</li></a>
+        <a href=""><li>login</li></a>
+        <a href="/create/bid"><li>Buy Item</li></a>
+        <a href="/create/adds"><li>Sel Item</li></a>
+        <a href="/about"><li>about us</li></a>
+        </ul>
+      </div>
+
 <form action="{{route('StoreBid')}}" method="POST" enctype="multipart/form-data">
 @csrf
 <h1>Menu Lelang</h1>
@@ -33,17 +94,23 @@
 <a>Nama: {{$Adds->NamaBarang}}</a>
 <br>
 <a>Harga Limit: {{$Adds->HargaLimit}}</a>
-@endforeach
+
+<!-- Input Nama Barangnya -->
+<div class="mb-3">
+          <label for="NamaBarang" class="form-label">Nama Barang</label>
+          <input type="text" class="form-control" id="NamaBarang" name="NamaBarang">
+</div>
 
 <!-- Bikin harga lelang nya yang bisa di input -->
-    <div class="mb-3">
+<div class="mb-3">
           <label for="HargaLelang" class="form-label">Harga Lelang</label>
           <input type="text" class="form-control" id="HargaLelang" name="HargaLelang">
     </div>
 
 <!-- Bikin Button simpan bid -->
-        <button type="submit" class="btn btn-primary">Simpan Data Bid</button>
+    <button type="submit" class="btn btn-primary">Simpan Data Bid</button>
+@endforeach    
       </form>
-      <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
+      <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>    
 </body>
 </html>

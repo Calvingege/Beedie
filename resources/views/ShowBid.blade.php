@@ -27,9 +27,11 @@
     <tbody>
     @foreach ($Bid as $Bid)
         <tr>
+            <td>{{$Bid->NamaBarang}}</td>
             <td>{{$Bid->HargaLelang}}</td>
         </tr>
         @endforeach
+
     </tbody>
     </table>
     <a href="/create/bid" >back</a>

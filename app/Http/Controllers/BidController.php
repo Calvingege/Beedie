@@ -16,10 +16,11 @@ class BidController extends Controller
 
     public function StoreBid(Request $request) {
         Bid::create([
+            'NamaBarang' => $request->NamaBarang,
             'HargaLelang' => $request->HargaLelang
         ]);
 
-        return redirect('/');
+        return redirect('/show/bid');
     }
 
     public function ShowBid() {
@@ -34,7 +35,7 @@ class BidController extends Controller
 
     public function UpdateBid($id, Request $request){
         Bid::findOrFail($id)->update([
-            'HargaLelang' => $request->HargaLelang,
+            'HargaLelang' => $request->HargaLelang
         ]);
         return redirect('/show/bid');
     }
